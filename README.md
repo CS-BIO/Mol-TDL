@@ -56,6 +56,9 @@ arr_train_loss.npy
 arr_test_loss.npy  
 
 # 4) Fine-Tuning on Downstream Tasks  
+Select the task-specific fine-tuning script and pass your pretrained checkpoint.
+
+Example: Fine-tune on $E_{ea}$
 
 
 # Contacts
