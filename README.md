@@ -23,7 +23,7 @@ This repository provides a documented, end-to-end pretraining pipeline and task-
 -  + training_GCN2.py  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # contrastive pretraining (variant 2; use the one in your repo)  
 - finetune/  
 -  + training_finetune_*.py &nbsp;&nbsp; # task-specific fine-tuning scripts (e.g., E_ea)  
-- outputs/           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    # saved checkpoints, npy, and curves  
+- outputs/           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    # saved checkpoints, npy, and curves  
 
 # 3) Pretraining — Step by Step
 ## 3.1 CSV → SDF & 3D coordinate TXT
