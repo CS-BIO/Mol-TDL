@@ -13,7 +13,7 @@ txt_val:   3D_coor_pretrain_500k_vali.txt
 
 # Step-2: TXT -> .pt
 cutoffs: ["0-2","0-2.5","0-3","0-3.5","0-4"]
-mask_ratio: 0.20
+mask_ratio: 0.30
 pt_root: data/processed
 ds_prefix_train: pretrain_500k_agu_train
 ds_prefix_val:   pretrain_500k_agu_vali
