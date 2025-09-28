@@ -37,7 +37,7 @@ data/sdf_<dataset>/{train,valication}/...
 ## 3.2 3D-TXT → PyG.pt shards with simplicial complexes
 python pretrain/creat_data_DC.py
 
-**Outputs:**
+**Outputs:**  
 data/processed/<dataset>_agu_train{i}.pt  
 data/processed/<dataset>_agu_train{i}_mask.pt  
 data/processed/<dataset>_agu_vali{i}.pt  
@@ -46,16 +46,16 @@ data/processed/<dataset>_agu_vali{i}_mask.pt
 ## 3.3 Contrastive Pretraining (final checkpoint + logs)
 python pretrain/training_GCN.py  
 
-**Expected inputs (from 3.2):**
+**Expected inputs (from 3.2):**  
 data/processed/<dataset>_agu_train{i}.pt  
 data/processed/<dataset>_agu_vali{i}.pt  
 
-**Outputs:**
+**Outputs:**  
 model_<dataset>.pt  
 arr_train_loss.npy  
 arr_test_loss.npy  
 
-# 4) Fine-Tuning on Downstream Tasks
+# 4) Fine-Tuning on Downstream Tasks  
 
 
 # Contacts
