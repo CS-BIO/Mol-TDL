@@ -29,5 +29,8 @@ This repository provides a documented, end-to-end pretraining pipeline and task-
 ## 3.1 CSV → SDF & 3D coordinate TXT
 python pretrain/data_process.py
 
+**Outputs**
+
+
 # Contacts
 If you have any questions or comments, please feel free to email Cong Shen (cshen[at]hnu[dot]edu[dot]cn).
