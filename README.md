@@ -14,15 +14,15 @@ This repository provides a documented, end-to-end pretraining pipeline and task-
 
 # 2) Repository Layout (key folders)
 - configs/     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          #YAML or config files (hyperparameters & I/O paths)
-- data/        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          # raw CSVs, generated SDFs, and 3D TXT files   
+- data/        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          # raw CSVs, generated SDFs, and 3D TXT files   
 - data/processed/   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     # processed PyG shards: <dataset>_agu_{train,vali}{i}.pt (+ _mask)   
 - pretrain/  
--  + data_process.py   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # CSV -> SDF + 3D TXT (train/vali)  
--  + creat_data_DC.py  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # 3D TXT -> simplicial complexes -> PyG .pt shards  
--  + training_GCN.py   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # contrastive pretraining (variant 1)  
--  + training_GCN2.py  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # contrastive pretraining (variant 2; use the one in your repo)  
+-  + data_process.py   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # CSV -> SDF + 3D TXT (train/vali)  
+-  + creat_data_DC.py  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # 3D TXT -> simplicial complexes -> PyG .pt shards  
+-  + training_GCN.py   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   # contrastive pretraining (variant 1)  
+-  + training_GCN2.py  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  # contrastive pretraining (variant 2; use the one in your repo)  
 - finetune/  
--  + training_finetune_*.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # task-specific fine-tuning scripts (e.g., E_ea)  
+-  + training_finetune_*.py &nbsp;&nbsp; # task-specific fine-tuning scripts (e.g., E_ea)  
 - outputs/           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    # saved checkpoints, npy, and curves  
 
 # 3) Pretraining — Step by Step
