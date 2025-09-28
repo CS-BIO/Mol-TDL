@@ -13,7 +13,7 @@ This repository provides a documented, end-to-end pretraining pipeline and task-
 * conda activate mol-tdl
 
 # 2) Repository Layout (key folders)
-* configs/               # YAML or config files (hyperparameters & I/O paths) \\
+configs/               # YAML or config files (hyperparameters & I/O paths)   
 * data/                  # raw CSVs, generated SDFs, and 3D TXT files \\
 * data/processed/        # processed PyG shards: <dataset>_agu_{train,vali}{i}.pt (+ _mask) \\
 * pretrain/
