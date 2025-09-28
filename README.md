@@ -30,25 +30,25 @@ This repository provides a documented, end-to-end pretraining pipeline and task-
 python pretrain/data_process.py
 
 **Outputs:**
-3D_coor_<dataset>_train.txt  
-3D_coor_<dataset>_vali.txt  
-data/sdf_<dataset>/{train,valication}/...  
+3D_coor_dataset_train.txt  
+3D_coor_dataset_vali.txt  
+data/sdf_dataset/{train,valication}/...  
 
 ## 3.2 3D-TXT → PyG.pt shards with simplicial complexes
 python pretrain/creat_data_DC.py
 
 **Outputs:**  
-data/processed/<dataset>_agu_train{i}.pt  
-data/processed/<dataset>_agu_train{i}_mask.pt  
-data/processed/<dataset>_agu_vali{i}.pt  
-data/processed/<dataset>_agu_vali{i}_mask.pt  
+data/processed/dataset_agu_train{i}.pt  
+data/processed/dataset_agu_train{i}_mask.pt  
+data/processed/dataset_agu_vali{i}.pt  
+data/processed/dataset_agu_vali{i}_mask.pt  
 
 ## 3.3 Contrastive Pretraining (final checkpoint + logs)
 python pretrain/training_GCN.py  
 
 **Expected inputs (from 3.2):**  
-data/processed/<dataset>_agu_train{i}.pt  
-data/processed/<dataset>_agu_vali{i}.pt  
+data/processed/dataset_agu_train{i}.pt  
+data/processed/dataset_agu_vali{i}.pt  
 
 **Outputs:**  
 model_<dataset>.pt  
