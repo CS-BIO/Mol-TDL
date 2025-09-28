@@ -1,6 +1,13 @@
 # Mol-TDL
 Molecular Topological Deep Learning for Polymer Property Prediction
 
+This repository provides a documented, end-to-end pretraining pipeline and task-specific fine-tuning for multiscale/topological molecular modeling. We release:
+* Exact configs under configs/
+* Deterministic splits under splits/<dataset>/
+* Pretraining scripts and final weights with logs
+* One-command examples for pretraining and fine-tuning
+* Environment/automation for full reproducibility
+
 # Requirements
 * torch 1.13.1
 * torch-cluster 1.6.0
