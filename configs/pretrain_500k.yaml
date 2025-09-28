@@ -1,0 +1,34 @@
+run_name: pretrain_500k
+seed: 2025
+device: "cuda"   # or "cpu"
+
+# 输入与划分
+input_csv: data/pretrain_500k.csv
+splits_dir: splits/pretrain_500k
+
+# Step-1: SDF/TXT
+sdf_dir: data/sdf_pretrain_500k
+txt_train: 3D_coor_pretrain_500k_train.txt
+txt_val:   3D_coor_pretrain_500k_vali.txt
+
+# Step-2: TXT -> .pt
+cutoffs: ["0-2","0-2.5","0-3","0-3.5","0-4"]
+mask_ratio: 0.20
+pt_root: data/processed
+ds_prefix_train: pretrain_500k_agu_train
+ds_prefix_val:   pretrain_500k_agu_vali
+
+# Step-3: 对比预训练
+batch_size: 64
+val_batch_size: 64
+epochs: 100
+lr: 1.0e-3
+temperature: 0.1
+
+# 输出
+save_dir: outputs/pretrain_500k
+checkpoint: outputs/pretrain_500k/model_pretrain_500k.pt
+log_file: outputs/pretrain_500k/train.log
+loss_curves_npy:
+  train: outputs/pretrain_500k/arr_train_loss.npy
+  val:   outputs/pretrain_500k/arr_val_loss.npy
