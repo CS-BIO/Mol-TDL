@@ -30,36 +30,36 @@ This repository provides a documented, end-to-end pretraining pipeline and task-
 python pretrain/data_process.py
 
 **Outputs:**
-3D_coor_{dataset}_train.txt  
-3D_coor_{dataset}_vali.txt  
-data/sdf_{dataset}/{train,valication}/...  
+- 3D_coor_{dataset}_train.txt  
+- 3D_coor_{dataset}_vali.txt  
+- data/sdf_{dataset}/{train,valication}/...  
 
 ## 3.2 3D-TXT → PyG.pt shards with simplicial complexes
 python pretrain/creat_data_DC.py
 
 **Outputs:**  
-data/processed/{dataset}_agu_train{i}.pt  
-data/processed/{dataset}_agu_train{i}_mask.pt  
-data/processed/{dataset}_agu_vali{i}.pt  
-data/processed/{dataset}_agu_vali{i}_mask.pt  
+- data/processed/{dataset}_agu_train{i}.pt  
+- data/processed/{dataset}_agu_train{i}_mask.pt  
+- data/processed/{dataset}_agu_vali{i}.pt  
+- data/processed/{dataset}_agu_vali{i}_mask.pt  
 
 ## 3.3 Contrastive Pretraining (final checkpoint + logs)
 python pretrain/training_GCN.py  
 
 **Expected inputs (from 3.2):**  
-data/processed/{dataset}_agu_train{i}.pt  
-data/processed/{dataset}_agu_vali{i}.pt  
+- data/processed/{dataset}_agu_train{i}.pt  
+- data/processed/{dataset}_agu_vali{i}.pt  
 
 **Outputs:**  
-model_<dataset>.pt  
-arr_train_loss.npy  
-arr_test_loss.npy  
+- model_<dataset>.pt  
+- arr_train_loss.npy  
+- arr_test_loss.npy  
 
 # 4) Fine-Tuning on Downstream Tasks  
 Select the task-specific fine-tuning script and pass your pretrained checkpoint.
 
-Example: Fine-tune on $E_{ea}$
-
+**Example: Fine-tune on $E_{ea}$**  
+python training_finetune_Eea.py
 
 # Contacts
 If you have any questions or comments, please feel free to email Cong Shen (cshen[at]hnu[dot]edu[dot]cn).
